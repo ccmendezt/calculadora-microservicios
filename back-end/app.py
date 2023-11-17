@@ -34,5 +34,9 @@ def getDivision(numero1,numero2):
 def getPotencia(numero1,numero2):
 		return str(numero1**numero2)
 
+@app.route('/raiz/<int:numero1>')
+def getRaiz(numero1):
+		return str(numero1**0.5)
+
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=81, debug=True)
