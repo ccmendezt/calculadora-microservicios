@@ -36,6 +36,8 @@ def getPotencia(numero1,numero2):
 
 @app.route('/raiz/<int:numero1>')
 def getRaiz(numero1):
+		if numero1 < 0:
+			return 'No se puede sacar raiz cuadrada de un numero negativo'
 		return str(numero1**0.5)
 
 if __name__ == '__main__':
